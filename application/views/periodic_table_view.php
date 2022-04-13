@@ -95,8 +95,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         },
                         dataType: "json",
                         success: function (data) {
-                            alert('successfully login!'+ data.first_name)
-
+                            alert( "Successfully login  "+data.first_name );
                         }
                     });
                 });
