@@ -40,7 +40,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<script type="module" src="<?php echo base_url() ?>assets/js/periodic_table.js"></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-        <!-- <script>
+        <script>
             window.fbAsyncInit = function ()
             {
                 FB.init
@@ -64,8 +64,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			// });
 			$( "#call_facebook_login" ).click(function() {
 				Login();
-//   alert( "Handler for .click() called." );
-});
+            // alert( "Handler for .click() called." );
+            });
 
             function Login() {
                 FB.login(function (response) {
@@ -101,7 +101,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 });
             }
             /** End of FB Login **/
-        </script> -->
+        </script>
 
 
 	</body>
