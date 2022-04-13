@@ -19,8 +19,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<button id="sphere">SPHERE</button>
 			<button id="helix">HELIX</button>
 			<button id="grid">GRID</button>
+			<button id="call_facebook_login">CONNECT TO FACEBOOK</button>
 		</div>
-		<a href="#" id="call_facebook_login">Continue with Facebook</a>
+        <div id="fb-root"></div>
 
 
 		<!-- Import maps polyfill -->
@@ -37,9 +38,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-		<!-- <script type="module" src="<?php echo base_url() ?>assets/js/periodic_table.js"></script> -->
+		<script type="module" src="<?php echo base_url() ?>assets/js/periodic_table.js"></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-		<div id="fb-root"></div>
         <script>
             window.fbAsyncInit = function ()
             {

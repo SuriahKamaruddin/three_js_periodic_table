@@ -131,92 +131,36 @@ let controls;
 
 const objects = [];
 const targets = { table: [], sphere: [], helix: [], grid: [] };
-// init();
-// animate();
-get_user_data();
+init();
+animate();
+// get_user_data();
 
+// function get_user_data(){
 
-function get_user_data(){
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '398312695627828',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.1'
-    });
+//   window.fbAsyncInit = function() {
+//     FB.init({
+//       appId      : '398312695627828',
+//       cookie     : true,
+//       xfbml      : true,
+//       version    : 'v2.1'
+//     });
       
-    FB.AppEvents.logPageView();   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-//    window.fbAsyncInit = function() {
-       FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
+//     FB.AppEvents.logPageView();   
       
 //   };
 
-    // window.fbAsyncInit = function() {    
-    //     FB.init({      
-    //         appId      :'398312695627828',      
-    //         xfbml      :true,      
-    //         version    :'v2.1'
-    //     });
-    // };
-    // (function(d, s, id) {
-    //     var js, fjs = d.getElementsByTagName(s)[0];
-    //     if(d.getElementById(id)) {
-    //         return;
-    //     }     
-    //     js = d.createElement(s); 
-    //     js.id = id;     
-    //     js.src ="https://connect.facebook.net/en_US/all.js";     
-    //     fjs.parentNode.insertBefore(js, fjs);
-    // }
-    // (document,'script','facebook-jssdk'));
+//   (function(d, s, id){
+//      var js, fjs = d.getElementsByTagName(s)[0];
+//      if (d.getElementById(id)) {return;}
+//      js = d.createElement(s); js.id = id;
+//      js.src = "https://connect.facebook.net/en_US/sdk.js";
+//      fjs.parentNode.insertBefore(js, fjs);
+//    }(document, 'script', 'facebook-jssdk'));
 
-//     const response = fetch('https://connect.facebook.net/en_US/all.js')
-//   const data = JSON.parse(JSON.stringify(response))
-//     var token = "EAAFqQ2a7gDQBAIKC4FL79WotPJCv7SsG0FZBL8gsb4UOhv2DTvDuAljlLUTuYXoYJk94cVMwPYEJDoIZBCQSdZBBgscMSN532u71hK3W6ZABfSmKdEvBAZCexHuYHCToOwkBQGdYBgHffYg8cClNyGXsVj1lsIbpQh0ZCAc6BhQXSdono2VHvbwlsGz95X5lTpZC0k3Xo77xus7CiISx3at0h94HMGTuZCnicy8uizwCt4OkB7Wlry2O";
-//     // window.location("https://connect.facebook.net/es_LA/sdk.js")
-//     FB.login(function(response) {
-//         if (response.authResponse) {
-//          console.log('Welcome!  Fetching your information.... ');
-//          FB.api('/suriah.kamaruddin', function(response) {
-//            console.log('Good to see you, ' + response.name + '.');
-//          });
-//         } else {
-//          console.log('User cancelled login or did not fully authorize.');
-//         }
-//     })
-    /* make the API call */
-    // FB.api(
-    //     "/suriah.kamaruddin",
-    //     function (response) {
-    //     if (response && !response.error) {
-    //         /* handle the result */
-    //         console.log(response);
-    //     }
-    //     }
-    // );
-
-    // FB.api(
-    //     '/suriah.kamaruddin',
-    //     {"fields":"fan_count"},
-    //     function(response) {
-    //       alert(response.fan_count);
-    //     }
-    //   );
-}
+//        FB.getLoginStatus(function(response) {
+//         statusChangeCallback(response);
+//     });
+// }
 function init() {
 
     camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
