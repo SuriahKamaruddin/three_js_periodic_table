@@ -76,7 +76,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<!-- Import maps polyfill -->
 		<!-- Remove this when import maps will be widely supported -->
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
 		<script type="importmap">
