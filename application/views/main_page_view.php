@@ -8,9 +8,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<title>Kasatria</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/main.css">
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/default.css">
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>node_modules/bootstrap-icons/font/bootstrap-icons.css">
+		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>../assets/css/main.css">
+		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>../assets/css/default.css">
+		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>../node_modules/bootstrap-icons/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	</head>
 	<body>
@@ -70,7 +70,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </button>
                     </div>
                 </form>
-                <a href="<?php echo base_url() ?>privacy_policy">Privacy Policy</a>
+                <a href="<?php echo base_url() ?>Privacy_policy">Privacy Policy</a>
             </div>
         </div>
 
