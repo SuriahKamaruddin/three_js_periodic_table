@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bootstrap-icons": "^1.8.1",
     "facebook-nodejs-business-sdk": "^6.0.0",
     "three": "^0.139.2"
   }

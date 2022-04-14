@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,6 +10,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/main.css">
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/default.css">
+		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>node_modules/bootstrap-icons/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	</head>
 	<body>
@@ -52,19 +54,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <p>Not a member? <a href="#!">Register</a></p>
                         <p>or sign up with:</p>
                         <button id="call_facebook_login" type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-facebook"></i>
+                        <i class="bi bi-facebook"></i>
                         </button>
 
                         <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-google text-danger"></i>
+                        <i class="bi bi-google text-danger"></i>
                         </button>
 
                         <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-twitter text-info"></i>
+                        <i class="bi bi-twitter text-info"></i>
                         </button>
 
                         <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-github text-secondary"></i>
+                        <i class="bi bi-github text-secondary"></i>
                         </button>
                     </div>
                 </form>
