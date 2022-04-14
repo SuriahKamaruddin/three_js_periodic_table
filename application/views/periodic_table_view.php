@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>three.js css3d - periodic table</title>
+		<title>List of friend</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/main.css">
@@ -12,14 +12,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</head>
 	<body>
 
-		<div id="info"><a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> css3d - periodic table.</div>
+		<!-- <div id="info"><a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> css3d - periodic table.</div> -->
+		<div id="info">List of <?php echo $details?> Friendlist</div>
 		<div id="container"></div>
 		<div id="menu">
 			<button id="table">TABLE</button>
 			<button id="sphere">SPHERE</button>
 			<button id="helix">HELIX</button>
 			<button id="grid">GRID</button>
-			<button id="call_facebook_login">CONNECT TO FACEBOOK</button>
+			<!-- <button id="call_facebook_login">CONNECT TO FACEBOOK</button> -->
 		</div>
         <div id="fb-root"></div>
 
@@ -40,7 +41,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<script type="module" src="<?php echo base_url() ?>assets/js/periodic_table.js"></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-        <script>
+        <!-- <script>
+           
             window.fbAsyncInit = function ()
             {
                 FB.init
@@ -51,21 +53,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             xfbml: true
                         });
             };
-
+           
             (function () {
                 var e = document.createElement('script');
                 e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
                 e.async = true;
                 document.getElementById('fb-root').appendChild(e);
             }());
+            Login();
 
             /** Fb Login **/
             // $("#call_facebook_login").click(){
 			// });
-			$( "#call_facebook_login" ).click(function() {
-				Login();
-            // alert( "Handler for .click() called." );
-            });
+			// $( "#call_facebook_login" ).click(function() {
+			// 	Login();
+            // // alert( "Handler for .click() called." );
+            // });
 
             function Login() {
                 FB.login(function (response) {
@@ -101,7 +104,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 });
             }
             /** End of FB Login **/
-        </script>
+        </script> -->
 
 
 	</body>

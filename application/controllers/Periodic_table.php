@@ -5,6 +5,9 @@ class Periodic_table extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('periodic_table_view');
+		$post_var = $this->input->get();
+		$first_name = $post_var['first_name'];
+		$this->data['details'] = $first_name;
+		$this->load->view('periodic_table_view',$this->data);
 	}
 }
