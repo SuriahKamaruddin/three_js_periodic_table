@@ -12,15 +12,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</head>
 	<body>
 
-		<!-- <div id="info"><a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> css3d - periodic table.</div> -->
-		<div id="info">List of <?php echo $details?> Friendlist</div>
+		<div class="mt-3" id="info"><span id="privacy_text" >Periodic table</span></div>
+        
 		<div id="container"></div>
 		<div id="menu">
 			<button id="table">TABLE</button>
 			<button id="sphere">SPHERE</button>
 			<button id="helix">HELIX</button>
 			<button id="grid">GRID</button>
-			<!-- <button id="call_facebook_login">CONNECT TO FACEBOOK</button> -->
+			<button onclick="Login()">CONNECT TO FACEBOOK</button>
 		</div>
         <div id="fb-root"></div>
 
@@ -41,7 +41,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<script type="module" src="<?php echo base_url() ?>assets/js/periodic_table.js"></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-        <!-- <script>
+        <script>
+
+            var data;
            
             window.fbAsyncInit = function ()
             {
@@ -60,20 +62,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 e.async = true;
                 document.getElementById('fb-root').appendChild(e);
             }());
-            Login();
-
-            /** Fb Login **/
-            // $("#call_facebook_login").click(){
-			// });
-			// $( "#call_facebook_login" ).click(function() {
-			// 	Login();
-            // // alert( "Handler for .click() called." );
-            // });
 
             function Login() {
                 FB.login(function (response) {
                     if (response.authResponse) {
-                        getUserInfo();
+                       getUserInfo();
                     } else {
                         console.log('User cancelled login or did not fully authorize.');
                     }
@@ -81,7 +74,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
             }
             function getUserInfo() {
                 FB.api('/me', {fields: "id,picture,email,first_name,gender,last_name,name"}, function (response) {
-                    console.log(response);
                     var pic = response.picture;
                     var first_name = response.first_name;
                     var last_name = response.last_name;
@@ -90,6 +82,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     var email = response.email;
                     var profile_pic = pic.data.url;
                     var url = "URL of your REST API";
+                    $("#privacy_text").text('This is the list of '+first_name+'\'s friends');
                     $.ajax({
                         type: "POST",
                         url: url,
@@ -98,13 +91,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         },
                         dataType: "json",
                         success: function (data) {
-                            alert( "Successfully login  "+data.first_name );
+                            return data;
                         }
                     });
                 });
             }
             /** End of FB Login **/
-        </script> -->
+        </script>
 
 
 	</body>
